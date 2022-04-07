@@ -32,7 +32,7 @@ img {
     width: 100%;
     height: 93vh;
     position: relative;
-    background: url('../img/portadaNetflix.webp') no-repeat center center/cover;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/0bd3a69d-6790-4edc-9818-1c8c558946c2/800a32e1-c721-4e07-bed9-6f2e4ed726f6/CL-es-20220329-popsignuptwoweeks-perspective_alpha_website_large.jpg') no-repeat center center/cover;
 }
 
 .showcase::after{
@@ -80,9 +80,14 @@ img {
 
 .showcase-content h1 {
     font-weight: 600;
-    font-size: 3.4rem;
+    font-size: 3.125rem;
     line-height: 1.1;
-    margin: 0 10rem 1rem 10rem;
+    margin: 0 12rem 1rem 12rem;
+}
+
+.showcase-content h2 {
+    font-size: 1.625rem;
+    font-weight: 400;
 }
 
 .showcase-content h3 {
@@ -108,14 +113,21 @@ img {
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45rem);
     border-radius: 2px;
 }
+.btn-icon {
+    font-size: 20px;
+    margin-top: 5.5%;
+    margin-left: 7%;
+}
 
 .btn-idioma{
-    margin-right: 17%;
+    margin-right: 25%;
     border: 0.5px solid white;
     cursor: default;
     width: 100px;
     height: 32px;
     font-size: 0.9rem;
+    outline: none;
+    
 }
 
 .i-logo {
@@ -138,19 +150,152 @@ img {
 
 .btn-xl {
     font-size: 1.8rem;
-    padding: 0.8rem 2.5rem;
+    padding: 0.8rem 2rem;
     display: flex;
 }
 
-.input-email {
-    padding: 1.3rem 9.2rem;
-    border: none;
-    float: left;
-    margin-right: 2px;
+.contenedor-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.contenedor-button {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+.contenedor-button input {
+    font-size: 16px;
+    outline: none;
+    padding-bottom: 10px 10px 0 0;
+    min-width: 475px;
+    height: 55px;
+    align-items: center;
+    text-indent: 10px; /* margen al placeholder del input */
+}
+
+/* Cards */
+
+.gran-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.do-elemento{
+    border-bottom: 8px solid #222;
+    position: relative;
+    padding: 50px 5%;
+    margin-bottom: 0;
+    background: 0 0;
+    color: #fff;
+    flex-flow: row-reverse;
+}
+
+.titulo-do-elemento {
+    font-size: 2.94rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo-do-elemento {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0.75em 0 0.25em;
+}
+
+.cont-text {
+    width: 50%;
+    height: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    padding: 0 3rem 0 0;
+    z-index: 3;
+    float: right;
+    margin-top: 8%;
+}
+
+.cont-img{
+    width: 45%;
+    display: flex;
+
+}
+
+.card-header img{
+    width: 46px;
+    height: 64px;
+}
+
+.phone {
+    max-width: 100%;
+    height: auto;
+    border: 0;  
+    margin-left: 0;
+}
+
+.card-1 {
+    position: absolute;
+    left: 26.5%;
+    bottom: 12%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 0 auto 0 auto;
+    background: #000;
+    display: flex;
+    width: 27%;
+    min-width: 15em;
+    padding: 0.25em 0.65em;
+    border: 2px solid rgba(255,255,255,.25);
+    border-radius: 0.75em;
+}
+.card-body {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    margin: 0.3em 0;
+    margin-left: 5%;
+}
+ .texto-1{
+     color: #fff;
+    font-weight: 600;
+    font-size: .9em;
+ }
+
+ .texto-2 {
+     color: #0071eb;
+     font-size: .9em;
+     font-weight: 400;
+ }
+.cargando::after {
+    width: 3em;
+    height: 3em;
+    outline: 2px solid #000;
+    outline-offset: -2px;
+    display: block;
+    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) center center no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+    content: '';
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -moz-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
 }
