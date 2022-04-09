@@ -717,7 +717,20 @@ img {
         margin-top: 0;
     }
 
-    
+    .footer{
+        flex-direction: column;
+    }
+    .footer p{
+        margin: 0 0 25px 22px;
+        color: #757575;
+    }
+    .footer p a{
+        color: #757575;
+    }
+    .footer .one {
+        flex-direction: row;
+        width: 90%;
+    }
 
 }
 
@@ -738,7 +751,7 @@ img {
     }
 
     .btn-idioma {
-        margin-right: 25%;
+        margin-right: 26.5%;
         height: 28px;
         font-size: 0.9rem;
         outline: none;
@@ -953,11 +966,8 @@ img {
         width: 120px;
         align-items: center;
     }
-
-    .footer .one {
-        flex-direction: column;
-        width: 50%;
-    }
+    
+    
    
     .footer .one .items li a {
         font-size: 16px;
