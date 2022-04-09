@@ -777,6 +777,7 @@ img {
     }
 
     .showcase .showcase-top img {
+        margin-top: -1%;
         width: 37%;
     }
 
