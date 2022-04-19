@@ -32,11 +32,12 @@ img {
 }
 
 .showcase {
-    width: 100%;
-    height: 93vh;
     position: relative;
     background: url('https://assets.nflxext.com/ffe/siteui/vlv3/0bd3a69d-6790-4edc-9818-1c8c558946c2/800a32e1-c721-4e07-bed9-6f2e4ed726f6/CL-es-20220329-popsignuptwoweeks-perspective_alpha_website_large.jpg') no-repeat center center/cover;
     border-bottom: 8px solid #222;
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .showcase::after {
@@ -44,7 +45,6 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -55,16 +55,60 @@ img {
 }
 
 .showcase-top {
+    max-width: 1920px;
+    width: 94%;
     position: relative;
-    z-index: 2;
-    height: 90px;
-    padding-right: 0;
+    margin: 0 3.5rem;
+    z-index: 10;
+    height: 5rem;
+    padding-top: 28px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .showcase-top img {
-    width: 200px;
+    width: 10.4375rem;
+    height: 2.8125rem;
+    padding-top: 0;
     position: absolute;
-    left: 2%;
+    overflow: hidden;
+}
+
+.showcase-top .submit {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    float: right;
+    position: relative;
+    right: 0;
+    font-size: 16px;
+}
+
+.showcase-top select {
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 0.875rem;
+    float: right;
+    position: relative;
+    right: 30px;
+    line-height: 1.3rem;
+    white-space: nowrap;
+    border-width: 1px;
+    border-color: rgb(170, 170, 170);
+}
+
+.showcase-top select option {
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
 }
 
 .showcase-top a {
@@ -76,76 +120,36 @@ img {
 
 .showcase-content {
     position: relative;
+    width: 100%;
     z-index: 2;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
+    padding: 168px 0;
+    max-width: 950px;
     text-align: center;
-    margin-top: 9rem;
 }
 
 .showcase-content h1 {
-    font-weight: 600;
-    font-size: 3.125rem;
+    max-width: 800px;
+    font-size: 4rem;
+    margin: 0 auto;
     line-height: 1.1;
-    margin: 0 12rem 1rem 12rem;
+    font-weight: bold;
+    direction: ltr;
+    display: block;
 }
 
 .showcase-content h2 {
     font-size: 1.625rem;
+    max-width: 800px;
+    margin: 1rem auto;
     font-weight: 400;
 }
 
 .showcase-content h3 {
-    font-weight: 200;
+    font-weight: 400;
     font-size: 1.23rem;
     line-height: 1.25;
     margin: 2rem 0 1.1rem;
-}
-
-
-/* Botones */
-.btn {
-    display: inline-block;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 0.4rem 1.3rem;
-    font-size: 1rem;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    margin-right: 0;
-    outline: none;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45rem);
-    border-radius: 2px;
-}
-
-.btn-icon {
-    font-size: 20px;
-    margin-top: 5.5%;
-    margin-left: 7%;
-}
-
-.btn-idioma {
-    margin-right: 20%;
-    border: 0.5px solid white;
-    cursor: default;
-    width: 100px;
-    height: 32px;
-    font-size: 0.9rem;
-    outline: none;
-}
-
-.i-logo {
-    margin-left: 5px;
-    margin-top: 7px;
-    size: 50%;
-}
-
-.arrow {
-    margin-right: 1px;
 }
 
 .btn:hover {
@@ -160,216 +164,190 @@ img {
     font-size: 1.8rem;
     padding: 0.8rem 2rem;
     display: flex;
+    height: 70px;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45rem);
+    border-radius: 2px;
+    background: var(--primary-color);
 }
 
 .contenedor-button {
+    max-width: 950px;
+    padding-top: 0.2rem;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
 }
 
 .contenedor-button input {
+    min-width: 500px;
     font-size: 16px;
     outline: none;
-    padding-bottom: 10px 10px 0 0;
-    min-width: 475px;
-    height: 55px;
+    padding: 10px 10px 0;
+    height: 70px;
     align-items: center;
-    text-indent: 10px;
+    border-radius: 3px;
+    line-height: normal;
     /* margen al placeholder del input */
 }
 
-/* Cards */
-
-.contenedor1 {
+/* CONTAINERS */
+.contenedor {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    padding: 2rem 3rem 5rem;
+    padding: 0 25rem;
     border-bottom: 8px solid #222;
-    margin-bottom: 0;
-    background: 0 0;
+    padding-bottom: 60px;
 }
 
-.contenedor1 .cont-text1 {
-    width: 45%;
+.contenedor h2 {
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
 }
 
-.contenedor1 .cont-text1 h1 {
-    font-size: 3.1rem;
+.contenedor p {
+    font-size: 1.625rem;
+    font-weight: 400;
+    width: 90%;
 }
 
-.contenedor1 .cont-text1 p {
-    font-size: 1.6rem;
-}
-
-.contenedor1 .cont-img {
-    position: relative;
+/* CONTAINER 1 */
+.contenedor .cont-text1 {
+    padding-top: 14%;
     width: 55%;
 }
 
-.contenedor1 .cont-img video {
-    box-sizing: border-box;
-    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png) center center no-repeat;
-    background-size: contain;
-    width: 100%;
-    padding: 13.2% 20.1% 15.4% 19.3%;
-}
-
-.contenedor2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2rem 3rem 5rem 0;
-    border-bottom: 8px solid #222;
-    margin-bottom: 0;
-    background: 0 0;
-}
-
-.contenedor2 .cont-text1 {
-    width: 57%;
-    padding-left: 8%;
-}
-
-.contenedor2 .cont-text1 h1 {
-    font-size: 3.1rem;
-    padding-bottom: 20px;
-}
-
-.contenedor2 .cont-text1 p {
-    font-size: 1.6rem;
-}
-
-.contenedor2 .cont-img {
+.contenedor .cont-img1 {
+    margin-top: 28px;
     position: relative;
-    width: 43%;
+    width: 47%;
 }
 
-
-.contenedor3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2rem 0 5rem 3rem;
-    border-bottom: 8px solid #222;
-    margin-bottom: 0;
-    background: 0 0;
-}
-
-.contenedor4 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 3rem 3rem 4rem 2rem;
-    border-bottom: 8px solid #222;
-    margin-bottom: 0;
-    background: 0 0;
-}
-
-.contenedor4 .cont-text1 {
-    width: 55%;
-    padding-left: 20px;
-}
-
-.contenedor4 .cont-img {
+.contenedor .cont-img1 img {
     position: relative;
-    width: 50%;
+    z-index: 2;
+    width: 105%;
+    max-width: 110%;
+    height: auto;
+    border: 0;
 }
 
-.contenedor4 .cont-text1 h1 {
-    font-size: 3.1rem;
-    padding-bottom: 20px;
-}
-
-.contenedor4 .cont-text1 p {
-    font-size: 1.6rem;
-}
-
-.contenedor3 .cont-img video {
-    box-sizing: border-box;
-    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png) center center no-repeat;
-    background-size: contain;
-    width: 100%;
-    padding: 7% 23% 29% 22%;
-}
-
-.contenedor3 .cont-text1 {
-    width: 50%;
-}
-
-.contenedor3 .cont-text1 h1 {
-    font-size: 3.1rem;
-    padding-bottom: 20px;
-}
-
-.contenedor3 .cont-text1 p {
-    font-size: 1.6rem;
-}
-
-.contenedor3 .cont-img {
-    position: relative;
-    width: 59%;
-}
-
-
-.card-header img {
-    width: 46px;
-    height: 64px;
-}
-
-.card-1 {
+.contenedor .cont-img1 video {
+    width: 120%;
+    height: 100%;
+    max-width: 120%;
+    max-height: 55%;
+    top: 47%;
+    left: 53%;
     position: absolute;
-    left: 50%;
-    width: 70%;
-    height: 27%;
-    bottom: 9%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-    margin: 0 auto 0 auto;
-    background: #000;
-    display: flex;
-    min-width: 15em;
-    padding: 0.25em 0.65em;
+    transform: translate(-50%, -50%);
+}
+
+/* CONTAINER 2 */
+
+.contenedor .cont-text2 {
+    width: 50%;
+    padding-top: 12%;
+}
+
+.contenedor .cont-img2 {
+    position: relative;
+    width: 45%;
+    margin-left: -70px;
+    margin-right: 130px;
+    margin-top: 28px;
+}
+
+.contenedor .cont-img2 img {
+    width: 100%;
+}
+
+.contenedor .cont-img2 .box {
     border: 2px solid rgba(255, 255, 255, .25);
-    border-radius: 0.75em;
+    background-color: #000;
+    border-radius: 10px;
+    width: 68%;
+    height: 28%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: -26%
 }
 
-.card-body {
-    flex-grow: 1;
-    flex-shrink: 1;
-    margin: 1.3em;
+.contenedor .cont-img2 .box .boxshot {
+    width: 20%;
 }
 
-.texto-1 {
-    color: #fff;
-    font-weight: 600;
+.contenedor .cont-img2 .box p {
+    margin-left: 5%;
+    margin-top: 3%;
     font-size: 1em;
+    font-weight: 600;
 }
 
-.texto-2 {
-    color: #0071eb;
-    font-size: .9em;
+.contenedor .cont-img2 .box p a {
+    color: #1456ff;
+    font-size: 1em;
     font-weight: 400;
 }
 
-.cargando::after {
+.contenedor .cont-img2 .box .download-gif {
     width: 3em;
     height: 3em;
-    padding: 25px 0 0 10px;
-    outline: 2px solid #000;
-    outline-offset: -2px;
-    display: block;
-    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) center center no-repeat;
-    background-size: 100%;
-    content: '';
+    position: absolute;
+    right: 5%;
+}
+
+/* CONTAINER 3 */
+
+.contenedor .cont-text3 {
+    width: 55%;
+    padding-top: 19%;
+}
+
+.contenedor .cont-img3 {
+    width: 47%;
+    position: relative;
+    padding-bottom: 8%;
+    padding-top: 5%;
+}
+
+.contenedor .cont-img3 img {
+    position: absolute;
+    width: 109%;
+
+}
+
+.contenedor .cont-img3 video {
+    margin: 8% 10% 20% 21%;
+    width: 68%;
+}
+
+/* CONTAINER 4 */
+
+.contenedor .cont-text4 {
+    width: 54%;
+    padding-left: 2%;
+    margin-right: -27px;
+    padding-top: 14%;
+}
+
+.contenedor .cont-img4 {
+    position: relative;
+    width: 46%;
+    padding-top: 7%;
+}
+
+.contenedor .cont-img4 img {
+    width: 100%;
 }
 
 /* Sección preguntas */
@@ -399,6 +377,14 @@ img {
     font-weight: 400;
     text-decoration: none;
 }
+
+/* .item a i {
+    display: none;
+}
+
+ .item a.activo i {
+    display: block;
+} */
 
 .icon {
     width: 20px;
@@ -506,34 +492,45 @@ img {
 
 /* MEDIA SCREEN */
 
-@media screen and (max-width: 787px) { 
-   
-    .showcase-top a {
-        right: -7%;
+@media (max-width: 943px) {
+    .showcase {
+        width: 100%;
     }
-    
+
+    .showcase::after {
+        box-shadow: inset 10px 10px 50px #1b1b1b, inset -30px -30px 100px #1b1b1b;
+    }
+
     .showcase .showcase-top {
-        padding: 20px 50px;
+        position: relative;
+        padding: 30px 40px;
     }
 
     .showcase .showcase-top img {
-        width: 20%;
+        left: -10px;
+        width: 12%;
+        top: 20px;
+    }
+
+    .showcase-content {
+        width: 73%;
+        top: -35px;
     }
 
     .showcase-content h1 {
-        font-size: 3.1rem;
-        width: 90%;
+        font-size: 3.125rem;
     }
 
     .showcase-content h2 {
-        font-size: 1.6rem;
-        padding: 0.8rem 0 0 0;
+        font-size: 1.625rem;
+        font-weight: 400;
+        padding-bottom: 0;
     }
 
     .showcase-content h3 {
-        width: 100%;
-        font-size: 1.4rem;
-        padding: 0 22% 0 22%;
+        margin-top: 0;
+        font-size: 23px;
+        padding: 0 17% 0 17%;
     }
 
     .showcase .contenedor-button {
@@ -541,13 +538,17 @@ img {
     }
 
     .showcase .contenedor-button input {
+        margin-top: -10px;
+        height: 60px;
         max-width: 500px;
         margin-bottom: 15px;
     }
 
     .showcase .contenedor-button .btn-xl {
         font-size: 1rem;
-        min-height: 40px;
+        height: 40px;
+        width: 120px;
+        padding: 15px;
     }
 
     .showcase .contenedor-button .btn-icon {
@@ -555,122 +556,79 @@ img {
         margin-top: 0;
     }
 
-    .contenedor1 {
+    .contenedor {
+        width: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         text-align: center;
         padding: 4rem 1rem 4rem;
     }
 
-    .contenedor1 .cont-text1 {
+    .contenedor .cont-text1 {
         width: 90%;
     }
 
-    .contenedor1 .cont-text1 h1 {
+    .contenedor .cont-text1 h2 {
         font-size: 2.5rem;
         padding-bottom: 1rem;
     }
 
-    .contenedor1 .cont-text1 p {
+    .contenedor .cont-text1 p {
         font-size: 1.25rem;
     }
 
-    .contenedor1 .cont-img {
+    .contenedor .cont-img {
         width: 100%;
         margin-top: 10px;
     }
 
-    .contenedor2 {
-        display: flex;
+    .md\:column-reverse {
         flex-direction: column-reverse;
-        justify-content: center;
-        text-align: center;
-        padding: 4rem 0 4rem;
     }
 
-    .contenedor2 .cont-text1 {
+    .md\:column {
+        flex-direction: column;
+    }
+
+    .contenedor .cont-text2 {
         width: 90%;
     }
 
-    .contenedor2 .cont-img {
+    .contenedor .cont-img2 {
         width: 80%;
         margin-top: 10px;
     }
 
-    .card-body {
-        margin: 1em 7em 0 0;
-    }
-
-    .texto-2 {
-        margin: 0 1.6em 0 0;
-    }
-
-    .contenedor2 .cont-text1 h1 {
-        font-size: 2.5rem;
-    }
-
-    .contenedor2 .cont-text1 p {
-        font-size: 1.25rem;
-    }
-
-    .card-1 {
-        width: 66%;
-        height: 18%;
-    }
-
-    .cargando::after {
-        padding: 1.7em 0 0 10px;
-        width: 2.3em;
-        height: 2.3em;
-    }
-
-    .contenedor3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 4rem 0 4rem;
-    }
-
-    .contenedor3 .cont-text1 {
+    .contenedor .cont-text3 {
         width: 90%;
     }
 
-    .contenedor3 .cont-text1 h1 {
+    .contenedor .cont-text3 h2 {
         font-size: 2.5rem;
     }
 
-    .contenedor3 .cont-text1 p {
+    .contenedor .cont-text3 p {
         font-size: 1.25rem;
     }
 
-    .contenedor3 .cont-img {
+    .contenedor .cont-img3 {
         width: 85%;
         margin-top: 10px;
     }
 
-    .contenedor4 {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        text-align: center;
-        padding: 4rem 0 4rem;
-    }
-
-    .contenedor4 .cont-text1 {
+    .contenedor .cont-text4 {
         width: 90%;
     }
 
-    .contenedor4 .cont-text1 h1 {
+    .contenedor .cont-text4 h2 {
         font-size: 2.5rem;
     }
 
-    .contenedor4 .cont-text1 p {
+    .contenedor .cont-text4 p {
         font-size: 1.25rem;
     }
 
-    .contenedor4 .cont-img {
+    .contenedor .cont-img4 {
         width: 80%;
         margin-top: 10px;
     }
@@ -724,25 +682,28 @@ img {
         margin-top: 0;
     }
 
-    .footer{
+    .footer {
         flex-direction: column;
     }
-    .footer p{
+
+    .footer p {
         margin: 0 0 25px 22px;
         color: #757575;
     }
-    .footer p a{
+
+    .footer p a {
         color: #757575;
     }
+
     .footer .one {
         flex-direction: row;
         width: 95%;
     }
-   
+
 
 }
 
-@media screen and (max-width: 449px) {
+@media (max-width: 659px) {
 
     .showcase::after {
         background: rgba(0, 0, 0, 0.4);
@@ -759,17 +720,12 @@ img {
         white-space: nowrap;
     }
 
-    .btn-idioma {
-        margin-right: 30%;
-        height: 28px;
-        font-size: 0.9rem;
-        outline: none;
-    }
-
     .showcase {
         width: 100%;
-        height: 650px;
-        top: 1%;
+    }
+
+    .showcase-content {
+        width: 100%;
     }
 
     .showcase-top a {
@@ -777,31 +733,35 @@ img {
     }
 
     .showcase .showcase-top img {
-        margin-top: -1%;
-        width: 37%;
+        margin-top: 0;
+        width: 18%;
     }
 
     .showcase-content h1 {
-        font-size: 1.75rem;
+        font-size: 3.125rem;
         max-width: 640px;
         margin: 0 auto;
     }
 
     .showcase-content h2 {
-        font-size: 1.125rem;
+        width: 100%;
+        max-width: 560px;
+        font-size: 1.625rem;
         margin: 1rem auto;
     }
 
     .showcase-content h3 {
-        max-width: 400px;
+        width: 100%;
+        max-width: 500px;
         font-size: 18px;
         margin: 0 auto;
-        padding: 0 8%;
+        padding: 0 3%;
         font-weight: 400;
         margin-bottom: 10px;
     }
 
     .showcase .contenedor-button input {
+        width: 100%;
         min-width: 400px;
         height: 48px;
         margin-bottom: 15px;
@@ -814,133 +774,130 @@ img {
         align-items: center;
     }
 
-    .contenedor1 .cont-text1 {
+    .contenedor {
         width: 100%;
+        padding: 8%;
     }
 
-    .contenedor1 .cont-text1 h1 {
-        font-size: 1.625rem;
+    .contenedor .cont-text1 {
+        padding-top: 0;
+    }
+
+    .contenedor .cont-text1 h2 {
+        font-size: 2.5rem;
         line-height: 1.1;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
+        padding-left: 10%;
     }
 
-    .contenedor1 .cont-text1 p {
-        font-size: 1.125rem;
+    .contenedor .cont-text1 p {
+        font-size: 1.25rem;
         font-weight: 400;
-        margin: 0.75em 0 0;
-    }
-
-    .contenedor1 .cont-img {
         width: 110%;
     }
 
-    .contenedor2 .cont-text1 {
+    .contenedor .cont-img1 {
+        margin-top: -1px;
+        width: 97%;
+        padding-bottom: 15px;
+    }
+
+    .contenedor .cont-text2 {
         width: 100%;
+        padding-top: 0;
     }
 
-    .contenedor2 .cont-img {
-        width: 90%;
-        margin-top: 10px;
+    .contenedor .cont-img2 {
+        width: 100%;
+        padding-bottom: 50px;
+        margin-left: 0;
+        margin-top: -1px;
     }
 
-    .card-body {
-        margin: .8em 0 0 0;
+    .contenedor .cont-img2 .box {
+        width: 65%;
+        height: 80px;
+        margin-top: -22%;
     }
 
-    .texto-2 {
-        font-size: .75em;
-        margin: 0 3.2em 0 0;
-    }
-    .texto-1 {
-        font-size: .75em;
-        margin: 0 2.5em 0 0;
+    .contenedor .cont-img2 .box .boxshot {
+        width: 13%;
     }
 
-    .contenedor2 .cont-text1 h1 {
-        font-size: 1.625rem;
+    .contenedor .cont-img2 .box p {
+        margin: auto;
+        margin-left: -23%;
+    }
+
+    .contenedor .cont-img2 .box p a {
+        margin-left: -5%;
+    }
+
+    .contenedor .cont-text2 h2 {
+        font-size: 2.5rem;
         line-height: 1.1;
-        margin: 0 1rem 0 0;
-        font-weight: bold;
     }
 
-    .contenedor2 .cont-text1 p {
-        font-size: 1.125rem;
+    .contenedor .cont-text2 p {
+        font-size: 1.25rem;
         font-weight: 400;
-        margin: 0.1rem 0 0;
-    }
-
-    .card-1 {
-        width: 66%;
-        height: 22%;
-    }
-
-    .card-header img{
-        height: 3em;
-        max-width: 80%;
-    }
-
-    .cargando::after {
-        padding: 1.2em 0 0 10px;
-        width: 2em;
-        height: 2em;
-    }
-
-    .contenedor3 .cont-text1 {
         width: 100%;
     }
 
-    .contenedor3 .cont-text1 h1 {
-        font-size: 1.625rem;
+    .contenedor .cont-text3 {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .contenedor .cont-text3 h2 {
+        font-size: 2.5rem;
         line-height: 1.1;
-        margin: 0 1rem 0 0;
-        font-weight: bold;
     }
 
-    .contenedor3 .cont-text1 p {
-        font-size: 1.125rem;
+    .contenedor .cont-text3 p {
+        font-size: 1.25rem;
         font-weight: 400;
-        margin: 0.1rem 0.5em 0 0.5em;
-    }
-
-    .contenedor3 .cont-img {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .contenedor4 .cont-text1 {
         width: 100%;
     }
 
-    .contenedor4 .cont-text1 h1 {
-        font-size: 1.625rem;
+    .contenedor .cont-img3 {
+        width: 95%;
+        margin-top: -30px;
+        padding-bottom: 100px;
+    }
+
+    .contenedor .cont-text4 {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .contenedor .cont-text4 h2 {
+        font-size: 2.5rem;
         line-height: 1.1;
-        margin: 0 1rem 0 0;
-        font-weight: bold;
     }
 
-    .contenedor4 .cont-text1 p {
-        font-size: 1.125rem;
+    .contenedor .cont-text4 p {
+        font-size: 1.25rem;
         font-weight: 400;
-        margin: 0.1rem 0.5em 0 0;
+        width: 103%;
     }
 
-    .contenedor4 .cont-img {
-        width: 90%;
-        margin-top: 20px;
+    .contenedor .cont-img4 {
+        width: 100%;
     }
 
     .contenedor-list {
-        width: 100%;
+        width: 80%;
         text-align: center;
+        padding-top: 10%;
     }
 
     .contenedor-list .text {
         font-size: 1.125rem;
     }
 
-    .contenedor-list h1 {
-        font-size: 1.625rem;
+    .contenedor-list h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
     }
 
     .titulo {
@@ -952,6 +909,7 @@ img {
         width: 100%;
         border: 0;
     }
+
     .banner .box {
         margin: 1rem 0;
         margin-bottom: 4rem;
@@ -973,6 +931,7 @@ img {
         height: 48px;
         margin-bottom: 10px;
         font-size: 16px;
+        width: 80%;
     }
 
     .banner .box .contenedor-button .btn-xl {
@@ -980,11 +939,185 @@ img {
         width: 120px;
         align-items: center;
     }
-    
-    
-   
+
+
+
     .footer .one .items li a {
         font-size: 16px;
     }
+
+}
+
+@media (max-width: 500px) {
+    .showcase {
+        width: 100%;
+    }
+
+    .showcase .showcase-top img{
+        left: -7%;
+        width: 23%;
+    }
+
+    .showcase .showcase-top select{
+        height: 33px;
+        width: 30%;
+        font-size: 13px;
+        margin-right: -10px;
+    }
+
+    .showcase-content {
+        width: 90%;
+    }
+    
+    .showcase-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .showcase-content h2 {
+        font-size: 1.125rem;
+    }
+
+    .showcase-content h3 {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .showcase-content .contenedor-button input {
+        width: 100%;
+        min-width: 250px;
+    }
+    
+    .contenedor .cont-text1 h2 {
+        font-size: 1.625rem;
+    }
+
+    .contenedor .cont-text1 p {
+        font-size: 1.125rem;
+        margin-left: 10%;
+        width: 90%;
+    }
+
+    .contenedor .cont-img1 {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .contenedor .cont-img2 {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .contenedor .cont-img2 .box {
+        width: 70%;
+        height: 70px;
+        margin-top: -24%;
+    }
+
+    .contenedor .cont-img2 .box .boxshot {
+        width: 13%;
+    }
+
+    .contenedor .cont-img2 .box p {
+        margin: auto;
+        margin-left: -15%;
+        font-size: 0.9em;
+    }
+
+    .contenedor .cont-img2 .box p a {
+        margin-left: -10%;
+        font-size: 0.9em;
+    }
+
+    .contenedor .cont-text2 h2 {
+        font-size: 1.625rem;
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .contenedor .cont-text2 p {
+        font-size: 1.125rem;
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .contenedor .cont-text3 h2 {
+        font-size: 1.625rem;
+    }
+
+    .contenedor .cont-text3 p {
+        font-size: 1.125rem;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .contenedor .cont-img3 {
+        width: 85%;
+    }
+
+    .contenedor .cont-text4 h2 {
+        font-size: 1.625rem;
+    }
+
+    .contenedor .cont-text4 p {
+        font-size: 1.125rem;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .contenedor .cont-img4 {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .contenedor-list {
+        width: 100%;
+        text-align: center;
+        padding-top: 10%;
+    }
+
+    .contenedor-list .text {
+        font-size: 1.125rem;
+    }
+
+    .contenedor-list h2 {
+        font-size: 1.625rem;
+        margin-bottom: 30px;
+    }
+
+    .titulo {
+        font-size: 1.125rem;
+        padding: 0.8em 2.2em 0.8em 1.2em;
+        margin-bottom: 1px;
+        font-weight: 400;
+        position: relative;
+        width: 100%;
+        border: 0;
+    }
+
+    .banner .box {
+        margin: 1rem 0;
+        margin-bottom: 3rem;
+    }
+
+    .banner .box .heading h3 {
+        padding-top: 0%;
+        padding-bottom: 3px;
+        font-size: 18px;
+        width: 60%;
+    }
+
+    .banner .box .contenedor-button input {
+        width: 90%;
+    }
+
+    .banner .box .contenedor-button .btn-xl {
+        height: 20px;
+        width: 120px;
+    }
+
+    .footer .one .items li a {
+        font-size: 16px;
+    }
+
     
 }

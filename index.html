@@ -14,39 +14,46 @@
 </head>
 
 <body>
+    <!-- CABECERA -->
     <header class="showcase">
         <div class="showcase-top">
-            <img src="img/Netflix.png" alt="Netflix">
-            <a href="#" class="btn-idioma"><i class="fa-solid fa-globe i-logo"></i> Español <i
-                    class="fa-solid fa-caret-down arrow"></i></a>
-            <a href="#" class="btn btn-rounded">Iniciar sesión</a>
+            <img src="img/NetflixLogo.svg">
+            <!-- <img src="img/Netflix.png" alt="Netflix"> -->
+            <button href="#" class="submit">Iniciar sesión</button>
+            <select name="" id="idioma">
+                <option value="español">Español</option>
+                <option value="ingles">Inglés</option>
+                <!-- <i class="fa-solid fa-globe i-logo"> &#xf0ac;</i> -->
+            </select>
         </div>
-    
         <div class="showcase-content">
             <h1>Películas y series ilimitadas y mucho más.</h1>
             <h2>Disfruta donde quieras. Cancela cuando quieras.</h2>
             <div class="box">
-                <div class="heading">
-                    <h3>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de Netfilx.
-                    </h3>
-                </div>
-                <div class="contenedor-button">
+                <h3>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de
+                    Netfilx.
+                </h3>
+                <form class="contenedor-button">
                     <input name="" type="text" placeholder="Email">
                     <a href="#" class="btn btn-xl"> Comenzar
                         <i class="fas fa-chevron-right btn-icon"></i>
                     </a>
-                </div>
+                </form>
             </div>
         </div>
     </header>
-        <div class="contenedor1">
+    <!-- FIN CABECERA -->
+
+    <!-- CONTENEDORES -->
+    <section class="main-section">
+        <div class="contenedor md:column">
             <div class="cont-text1">
-                <h1>Disfruta en tu TV.</h1>
-                <p>Ve en smart TV, PlayStation, Xbox, Chromecast, Apple, TV,
+                <h2>Disfruta en tu TV.</h2>
+                <p>Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV,
                     reproductores de Blu-ray y más.</p>
             </div>
-            <div class="cont-img">
-                <!--  <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt=""> -->
+            <div class="cont-img1">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="">
                 <video autoplay playsinline muted loop>
                     <source
                         src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
@@ -54,37 +61,31 @@
                 </video>
             </div>
         </div>
-        <div class="contenedor2">
-            <div class="cont-img">
-                <img class="phone"
-                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
-                    alt="">
-                <div class="card-1">
-                    <div class="card-header">
-                        <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"
-                            alt="">
-                    </div>
-                    <div class="card-body">
-                        <div class="texto-1">Stranger Things</div>
-                        <div class="texto-2">Descargando...</div>
-                    </div>
-                    <div class="card-footer">
-                        <a class="cargando"></a>
-                    </div>
+        <div class="contenedor md:column-reverse">
+            <div class="cont-img2">
+                <img src="img/phone.jpg" alt="">
+                <div class="box">
+                    <img class="boxshot" src="img/boxshot.png" alt="">
+                    <p>Stranger Things<br>
+                        <a href="#">Descargando...</a>
+                    </p>
+                    <img class="download-gif" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif"
+                        alt="">
                 </div>
             </div>
-            <div class="cont-text1">
-                <h1>Descarga tus series para verlas offline.</h1>
+            <div class="cont-text2">
+                <h2>Descarga tus series para verlas offline.</h2>
                 <p>Guarda tu contenido favorito y tendrás siempre algo para ver.</p>
             </div>
         </div>
-
-        <div class="contenedor3">
-            <div class="cont-text1">
-                <h1>Disfruta donde quieras.</h1>
+        <div class="contenedor md:column">
+            <div class="cont-text3">
+                <h2>Disfruta donde quieras.</h2>
                 <p>Películas y series ilimitadas en tu teléfono, tablet, computadora y TV sin costo extra.</p>
             </div>
-            <div class="cont-img">
+            <div class="cont-img3">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
+                    alt="">
                 <video autoplay playsinline muted loop>
                     <source
                         src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v"
@@ -92,96 +93,104 @@
                 </video>
             </div>
         </div>
-        <div class="contenedor4">
-            <div class="cont-img">
+        <div class="contenedor md:column-reverse">
+            <div class="cont-img4">
                 <img src=" https://occ-0-1298-1740.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABeLa_an51Ptz6LMzNXnM9oDvlKl4yIJQKZJRJ9fVFPpPFK5toVuo-KytXEdqPI64KCph1OKms7nLxtCsXm_CARaR50wx.png?r=8ec"
                     alt="">
             </div>
-            <div class="cont-text1">
-                <h1>Crea perfiles para niños.</h1>
+            <div class="cont-text4">
+                <h2>Crea perfiles para niños.</h2>
                 <p>Los niños vivirás aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para
                     ellos, sin costo con tu membresía.</p>
             </div>
         </div>
-        <div class="contenedor-list">
-            <h1>Preguntas frecuentes</h1>
-            <div class="accordion-menu">
-                <div class="item" id="item1">
-                    <a href="#item1" class="titulo">
-                        <span>¿Qué es Netflix?</span>
-                        <i class="icon"></i>
-                    </a>
-                    <p class="text">
-                        Netflix es un servicio de streaming que ofrece una gran variedad de películas, series y
-                        documentales premiados en casi cualquier pantalla conectada a internet.
-                        <br><br>
-                        Todo lo que quieras ver, sin límites ni comerciales, a un costo muy accesible. Siempre hay algo
-                        nuevo por descubrir, ¡y todas las semanas se agregan más películas y series!
-                    </p>
-                </div>
-                <div class="item" id="item2">
-                    <a href="#item2" class="titulo">
-                        <span>¿Cuánto cuesta Netflix?</span>
-                        <i class="icon"></i>
-                    </a>
-                    <p class="text">
-                        Disfruta Netflix en tu smartphone, tablet, smart TV, laptop o dispositivo de streaming, todo por
-                        una tarifa plana mensual. Planes desde $5.940 hasta $10.700 al mes. Sin costos adicionales ni
-                        contratos.
-                    </p>
-                </div>
-                <div class="item" id="item3">
-                    <a href="#item3" class="titulo">
-                        <span>¿Dónde puedo ver Netflix?</span>
-                        <i class="icon"></i>
-                    </a>
-                    <p class="text">
-                        Disfruta donde quieras, cuando quieras. Inicia sesión en tu cuenta de Netflix para ver contenido
-                        al instante a través de netflix.com desde tu computadora personal o en cualquier dispositivo con
-                        conexión a internet que cuente con la app de Netflix, como smart TV, smartphones, tablets,
-                        reproductores multimedia y consolas de juegos.
-                        <br><br>
-                        Además, puedes descargar tus series favoritas con iOS, Android o la app para Windows 10. Con la
-                        función de descarga, puedes ver donde vayas y sin conexión a internet. Lleva Netflix contigo
-                        adonde sea.
-                    </p>
-                </div>
-                <div class="item" id="item4">
-                    <a href="#item4" class="titulo">
-                        <span>¿Cómo cancelo?</span>
-                        <i class="icon"></i>
-                    </a>
-                    <p class="text">
-                        Netflix es flexible. Sin contratos molestos ni compromisos. Cancela la membresía online con solo
-                        dos clics. No hay cargos por cancelación. Empieza y termina cuando quieras.
-                    </p>
-                </div>
-                <div class="item" id="item5">
-                    <a href="#item5" class="titulo">
-                        <span>¿Qué puedo ver en Netflix?</span>
-                        <i class="icon"></i>
-                    </a>
-                    <p class="text">
-                        Netflix tiene un amplio catálogo de películas, series, documentales, animes, originales
-                        premiados y más. Todo lo que quieras ver, cuando quieras.
-                    </p>
-                </div>
-                <div class="item" id="item6">
-                    <a href="#item6" class="titulo">
-                        <span>¿Es bueno para los niños?</span>
-                        <i class="icon"></i>
-                    </a>
-                    <p class="text">
-                        La experiencia de Netflix para niños está incluida en la membresía para que los padres tengan el
-                        control mientras los peques disfrutan series y películas familiares en su propio espacio.
-                        <br><br>
-                        Los perfiles para niños incluyen controles parentales protegidos por PIN que te permiten
-                        restringir el contenido que pueden ver los niños en función de la clasificación por edad y
-                        bloquear determinados títulos que no quieras que los niños vean.
-                    </p>
-                </div>
+    </section>
+    <!-- FIN CONTENEDORES -->
+
+    <!-- SECCIÖN PREGUNTAS -->
+    <div class="contenedor-list">
+        <h2>Preguntas frecuentes</h2>
+        <div class="accordion-menu">
+            <div class="item" id="item1">
+                <a href="#item1" class="titulo">
+                    <span>¿Qué es Netflix?</span>
+                    <i class="icon"></i>
+                    <!-- <i class="fa-solid fa-xmark"></i> -->
+                </a>
+                <p class="text">
+                    Netflix es un servicio de streaming que ofrece una gran variedad de películas, series y
+                    documentales premiados en casi cualquier pantalla conectada a internet.
+                    <br><br>
+                    Todo lo que quieras ver, sin límites ni comerciales, a un costo muy accesible. Siempre hay algo
+                    nuevo por descubrir, ¡y todas las semanas se agregan más películas y series!
+                </p>
+            </div>
+            <div class="item" id="item2">
+                <a href="#item2" class="titulo">
+                    <span>¿Cuánto cuesta Netflix?</span>
+                    <i class="icon"></i>
+                </a>
+                <p class="text">
+                    Disfruta Netflix en tu smartphone, tablet, smart TV, laptop o dispositivo de streaming, todo por
+                    una tarifa plana mensual. Planes desde $5.940 hasta $10.700 al mes. Sin costos adicionales ni
+                    contratos.
+                </p>
+            </div>
+            <div class="item" id="item3">
+                <a href="#item3" class="titulo">
+                    <span>¿Dónde puedo ver Netflix?</span>
+                    <i class="icon"></i>
+                </a>
+                <p class="text">
+                    Disfruta donde quieras, cuando quieras. Inicia sesión en tu cuenta de Netflix para ver contenido
+                    al instante a través de netflix.com desde tu computadora personal o en cualquier dispositivo con
+                    conexión a internet que cuente con la app de Netflix, como smart TV, smartphones, tablets,
+                    reproductores multimedia y consolas de juegos.
+                    <br><br>
+                    Además, puedes descargar tus series favoritas con iOS, Android o la app para Windows 10. Con la
+                    función de descarga, puedes ver donde vayas y sin conexión a internet. Lleva Netflix contigo
+                    adonde sea.
+                </p>
+            </div>
+            <div class="item" id="item4">
+                <a href="#item4" class="titulo">
+                    <span>¿Cómo cancelo?</span>
+                    <i class="icon"></i>
+                </a>
+                <p class="text">
+                    Netflix es flexible. Sin contratos molestos ni compromisos. Cancela la membresía online con solo
+                    dos clics. No hay cargos por cancelación. Empieza y termina cuando quieras.
+                </p>
+            </div>
+            <div class="item" id="item5">
+                <a href="#item5" class="titulo">
+                    <span>¿Qué puedo ver en Netflix?</span>
+                    <i class="icon"></i>
+                </a>
+                <p class="text">
+                    Netflix tiene un amplio catálogo de películas, series, documentales, animes, originales
+                    premiados y más. Todo lo que quieras ver, cuando quieras.
+                </p>
+            </div>
+            <div class="item" id="item6">
+                <a href="#item6" class="titulo">
+                    <span>¿Es bueno para los niños?</span>
+                    <i class="icon"></i>
+                </a>
+                <p class="text">
+                    La experiencia de Netflix para niños está incluida en la membresía para que los padres tengan el
+                    control mientras los peques disfrutan series y películas familiares en su propio espacio.
+                    <br><br>
+                    Los perfiles para niños incluyen controles parentales protegidos por PIN que te permiten
+                    restringir el contenido que pueden ver los niños en función de la clasificación por edad y
+                    bloquear determinados títulos que no quieras que los niños vean.
+                </p>
             </div>
         </div>
+    </div>
+    <!-- FIN SECCIÖN PREGUNTAS -->
+
+    <!-- BANNER -->
     <div class="banner">
         <div class="box">
             <div class="heading">
@@ -196,8 +205,11 @@
             </div>
         </div>
     </div>
+    <!-- FIN BANNER -->
+
+    <!-- FOOTER -->
     <footer class="footer">
-         <p>¿Preguntas? llama al <a href="">171 800 835 909</a></p> 
+        <p>¿Preguntas? llama al <a href="">171 800 835 909</a></p>
         <div class="one">
             <ul class="items">
                 <li><a href="#">Preguntas frecuentes</a></li>
@@ -228,5 +240,6 @@
         </div>
     </footer>
 </body>
+<!-- <script src="js/index.js"></script> -->
 
 </html>
